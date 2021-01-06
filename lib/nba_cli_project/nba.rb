@@ -21,4 +21,11 @@ class Players
     def self.all 
         @@all 
     end 
+
+    # a method that accepts the players name, and finds the object with that name
+    def self.find_player(player_name)
+        self.all.find do |player| 
+            player.name == player_name 
+        end 
+    end 
 end 

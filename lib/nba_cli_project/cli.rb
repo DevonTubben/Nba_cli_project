@@ -22,6 +22,7 @@ def players_list
     ["player1", "player2", "player3"].each.with_index(1) do |players, i|
         puts "#{i}, #{players}"
 end 
+player_selection
 end 
 
 def goodbye 
@@ -31,6 +32,14 @@ end
 def invalid 
     puts "Invalid input. Please try again."
     menu
+end 
+
+def player_selection 
+    puts "Select a player for more information."
+
+    selection = user_input 
+    Player.find_player(selection)
+    # query player class to find more information on player
 end 
 
 def menu 
