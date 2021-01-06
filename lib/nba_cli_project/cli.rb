@@ -4,7 +4,7 @@ class CLI
 
 def start 
     puts "Hello NBA fan! Let's start with your name:"
-
+    API.get_data 
     greet(user_input)
 end 
 
