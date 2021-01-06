@@ -15,6 +15,7 @@ end
 def greet(name) 
     puts "Welcome #{name}! Would you like to see a list of current NBA players?"
     puts "Input 'Y' to see the list of NBA players or 'N' to exit!"
+    menu 
 end 
 
 def menu 
@@ -28,6 +29,7 @@ def menu
 
     else 
         # invalid output and make the user select again
-        
+
     end 
+end 
 end 
