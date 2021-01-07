@@ -2,13 +2,13 @@
 
 class Players 
 
-    @all = []
+    @@all = []
 
     attr_accessor :first_name, :last_name, :team, :position
 
     def initialize(first_name, last_name, team, position)
-        @first_name = firstname 
-        @last_name = lastname 
+        @first_name = first_name 
+        @last_name = last_name 
         @team = team 
         @position = position
         save

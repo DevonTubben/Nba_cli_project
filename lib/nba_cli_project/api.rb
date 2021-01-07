@@ -8,7 +8,7 @@ class API
         response = RestClient.get('https://www.balldontlie.io/api/v1/players')
         players_array = JSON.parse(response)["data"]
         players_array.each do |player|
-        Player.new(player["first_name"], player["last_name"], player["team"], player["position"])
+        Players.new(player["first_name"], player["last_name"], player["team"], player["position"])
         binding.pry 
     end 
 end
