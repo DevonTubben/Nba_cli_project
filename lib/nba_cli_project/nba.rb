@@ -7,8 +7,8 @@ class Players
     attr_accessor :first_name, :last_name, :team, :position
 
     def initialize(first_name, last_name, team, position)
-        @first_name = first name 
-        @last_name = last name 
+        @first_name = firstname 
+        @last_name = lastname 
         @team = team 
         @position = position
         save
