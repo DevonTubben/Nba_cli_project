@@ -15,7 +15,7 @@ def introduction(name)
     puts "Input 'yes' to see the list of NBA players or 'no' to exit!"
     menu 
 end 
-# print out a list of all nba players. 
+
 def players_list 
     Players.all.each.with_index(1) do |players, i|
         puts "#{i}, #{players.name}"
