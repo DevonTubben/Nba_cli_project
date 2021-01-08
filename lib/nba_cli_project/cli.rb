@@ -3,14 +3,14 @@ class CLI
 def start 
     puts "Welcome NBA fan! What name would you like us to call you by?"
     API.get_data 
-    greet(user_input)
+    introduction(user_input)
 end 
 
 def user_input 
     gets.strip 
 end 
 
-def greet(name) 
+def introduction(name) 
     puts "Awesome #{name}! Would you like to see a list of current NBA players?"
     puts "Input 'Y' to see the list of NBA players or 'N' to exit!"
     menu 
@@ -24,7 +24,7 @@ player_selection
 end 
 
 def goodbye 
-    puts "Hopefully you found the information you were looking for! Bye!"
+    puts "Hopefully you found the information you were looking for. Bye!"
 end 
 
 def invalid 
