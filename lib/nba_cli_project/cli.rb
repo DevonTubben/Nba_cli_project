@@ -12,7 +12,7 @@ end
 
 def introduction(name) 
     puts "Awesome #{name}! Would you like to see a list of current NBA players?"
-    puts "Input 'yes' to see the list of NBA players or 'no' to exit!"
+    puts "Input 'y' to see the list of NBA players or 'n' to exit!"
     menu 
 end 
 
@@ -36,7 +36,10 @@ def player_choice
     puts "Choose a player to learn more information."
 
     choice = user_input 
-    player = Player.find_player(choice)
+    
+     puts "#{choice}" 
+     player = Player.find_player(choice)
+
     
 end 
 
@@ -51,10 +54,10 @@ end
 def menu 
     choice = user_input 
 
-    if choice == 'yes' || "y"
+    if choice == 'Y' || choice == 'y'
         players_list
         menu 
-    elsif choice == 'no' || "n"
+    elsif choice == 'N' || choice == 'n'
         goodbye 
     else 
         invalid
