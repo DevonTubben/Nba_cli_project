@@ -40,6 +40,13 @@ def player_choice
     
 end 
 
+def player_information(player)
+    puts "First name: #{player.first_name}"
+    puts "Last name: #{player.last_name}"
+    puts "Team: #{player.team}"
+    puts "Position: #{player.position}"
+end 
+
 def menu 
     choice = user_input 
 
