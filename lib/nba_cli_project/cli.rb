@@ -5,6 +5,7 @@ class CLI
 def start 
     puts "Hello NBA fan! Let's start with your name:"
     API.get_data 
+    binding.pry
     greet(user_input)
 end 
 
@@ -19,8 +20,8 @@ def greet(name)
 end 
 # print out a list of all nba players. Will need to change when api gets added
 def players_list 
-    ["player1", "player2", "player3"].each.with_index(1) do |players, i|
-        puts "#{i}, #{players}"
+    Players.all.each.with_index(1) do |players, i|
+        puts "#{i}, #{players.name}"
 end 
 player_selection
 end 
