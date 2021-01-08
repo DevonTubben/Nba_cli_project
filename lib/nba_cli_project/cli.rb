@@ -1,11 +1,8 @@
-#responsible for communicating between user and data
-
 class CLI 
 
 def start 
-    puts "Hello NBA fan! Let's start with your name:"
+    puts "Welcome NBA fan! What name would you like us to call you by?"
     API.get_data 
-    binding.pry
     greet(user_input)
 end 
 
@@ -14,11 +11,11 @@ def user_input
 end 
 
 def greet(name) 
-    puts "Welcome #{name}! Would you like to see a list of current NBA players?"
+    puts "Awesome #{name}! Would you like to see a list of current NBA players?"
     puts "Input 'Y' to see the list of NBA players or 'N' to exit!"
     menu 
 end 
-# print out a list of all nba players. Will need to change when api gets added
+# print out a list of all nba players. 
 def players_list 
     Players.all.each.with_index(1) do |players, i|
         puts "#{i}, #{players.name}"
@@ -27,7 +24,7 @@ player_selection
 end 
 
 def goodbye 
-    puts "Hopefully you got the information you were looking for! Bye!"
+    puts "Hopefully you found the information you were looking for! Bye!"
 end 
 
 def invalid 
@@ -46,11 +43,11 @@ end
 def menu 
     selection = user_input 
 
-    if selection == 'Y' 
+    if selection == 'Y' || "yes"
         # print the list of nba players
         players_list
         menu 
-    elsif selection == 'N' 
+    elsif selection == 'N' || "no"
         # give the user a goodbye message 
         goodbye 
     else 
