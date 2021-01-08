@@ -45,6 +45,7 @@ def player_information(player)
     puts "Last name: #{player.last_name}"
     puts "Team: #{player.team}"
     puts "Position: #{player.position}"
+    menu 
 end 
 
 def menu 
