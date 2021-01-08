@@ -1,5 +1,3 @@
-# what do you want your object model to look like
-
 class Players 
 
     @@all = []
