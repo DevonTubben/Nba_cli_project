@@ -18,7 +18,7 @@ end
 
 def players_list 
     Players.all.each.with_index(1) do |players, i|
-        puts "#{i}, #{players.name}"
+        puts "#{i}, #{players}"
 end 
 player_choice
 end 
