@@ -12,7 +12,7 @@ end
 
 def introduction(name) 
     puts "Awesome #{name}! Would you like to see a list of current NBA players?"
-    puts "Input 'Y' to see the list of NBA players or 'N' to exit!"
+    puts "Input 'yes' to see the list of NBA players or 'no' to exit!"
     menu 
 end 
 # print out a list of all nba players. 
@@ -20,7 +20,7 @@ def players_list
     Players.all.each.with_index(1) do |players, i|
         puts "#{i}, #{players.name}"
 end 
-player_selection
+player_choice
 end 
 
 def goodbye 
@@ -32,26 +32,23 @@ def invalid
     menu
 end 
 
-def player_selection 
-    puts "Select a player for more information."
+def player_choice  
+    puts "Choose a player to learn more information."
 
-    selection = user_input 
-    Player.find_player(selection)
+    choice = user_input 
+    Player.find_player(choice)
     # query player class to find more information on player
 end 
 
 def menu 
-    selection = user_input 
+    choice = user_input 
 
-    if selection == 'Y' || "yes"
-        # print the list of nba players
+    if choice == 'yes' || "y"
         players_list
         menu 
-    elsif selection == 'N' || "no"
-        # give the user a goodbye message 
+    elsif choice == 'no' || "n"
         goodbye 
     else 
-        # invalid output and make the user select again
         invalid
     end 
 
