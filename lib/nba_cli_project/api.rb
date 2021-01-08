@@ -5,8 +5,7 @@ def self.get_data
        player_array = JSON.parse(response)["data"]
        player_array.each do |player|
         Players.new(player["first_name"], player["last_name"], player["team"], player["position"])
-        Players.new(player)
-        binding.pry
+         binding.pry
    end 
  end
 
