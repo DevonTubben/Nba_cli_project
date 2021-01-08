@@ -36,8 +36,8 @@ def player_choice
     puts "Choose a player to learn more information."
 
     choice = user_input 
-    Player.find_player(choice)
-    # query player class to find more information on player
+    player = Player.find_player(choice)
+    
 end 
 
 def menu 
