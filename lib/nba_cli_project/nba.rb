@@ -2,7 +2,7 @@ class Players
 
     @@all = []
 
-    attr_accessor :first_name, :last_name, :team, :position
+    attr_accessor :first_name, :last_name, :position, :height_feet, :height_inches, :weight_pounds, :team
 
   # def initialize(first_name, last_name, team, position)
   #      @first_name = first_name 
@@ -30,6 +30,10 @@ class Players
     def full_name 
         @first_name + " " + @last_name
     end 
+
+   # def height 
+    #    @height_feet + " " + @height_inches 
+    # end 
 
     
     def self.find_player(player_name)
