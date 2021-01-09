@@ -27,10 +27,14 @@ class Players
         @@all 
     end 
 
+    def full_name 
+        @first_name + " " + @last_name
+    end 
+
     
     def self.find_player(player_name)
         self.all.find do |players| 
-            players.first_name == player_name 
+            players.full_name == player_name 
         end 
     end 
 end 

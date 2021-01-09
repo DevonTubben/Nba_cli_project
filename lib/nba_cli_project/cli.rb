@@ -18,7 +18,8 @@ end
 
 def player_list 
     Players.all.each.with_index(1) do |players, i|
-        puts "#{i}, #{players.first_name}"
+        #puts "#{i}, #{players.first_name}"
+        puts "#{i}, #{players.full_name}"
 end 
 player_choice
 end 
@@ -43,13 +44,25 @@ def player_choice
     
 end 
 
+#def player_information(players)
+#    puts "First name: #{players.first_name}"
+#    puts "Last name: #{players.last_name}"
+#    puts "Team: #{players.team}"
+#    puts "Position: #{players.position}"
+#    menu 
+#end 
+
 def player_information(players)
-    puts "First name: #{players.first_name}"
-    puts "Last name: #{players.last_name}"
-    puts "Team: #{players.team}"
+    puts "Name: #{players.full_name}"
+    puts "Team: #{players.full_name}"
     puts "Position: #{players.position}"
     menu 
 end 
+
+
+
+
+
 
 def menu 
     choice = user_input 
