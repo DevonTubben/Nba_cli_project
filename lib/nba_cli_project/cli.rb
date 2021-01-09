@@ -3,7 +3,6 @@ class CLI
 def start 
     puts "Welcome NBA fan! What name would you like us to call you by?"
     API.get_data 
-    binding.pry
     introduction(user_input)
 end 
 
@@ -19,7 +18,7 @@ end
 
 def player_list 
     Players.all.each.with_index(1) do |players, i|
-        puts "#{i}, #{players}"
+        puts "#{i}, #{players.first_name}"
 end 
 player_choice
 end 
@@ -39,16 +38,16 @@ def player_choice
     choice = user_input 
     
      puts "#{choice}" 
-     players = Players.find_player(choice)
+     player = Players.find_player(choice)
 
     
 end 
 
 def player_information(players)
-    puts "First name: #{players.first_name}"
-    puts "Last name: #{players.last_name}"
-    puts "Team: #{players.team}"
-    puts "Position: #{players.position}"
+    puts "First name: #{player.first_name}"
+    puts "Last name: #{player.last_name}"
+    puts "Team: #{player.team}"
+    puts "Position: #{player.position}"
     menu 
 end 
 

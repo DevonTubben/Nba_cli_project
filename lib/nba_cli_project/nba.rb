@@ -30,7 +30,7 @@ class Players
     
     def self.find_player(player_name)
         self.all.find do |players| 
-            players.name == player_name 
+            players.first_name == player_name 
         end 
     end 
 end 
