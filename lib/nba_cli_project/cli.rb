@@ -16,7 +16,7 @@ def introduction(name)
     menu 
 end 
 
-def players_list 
+def player_list 
     Players.all.each.with_index(1) do |players, i|
         puts "#{i}, #{players}"
 end 
@@ -38,16 +38,16 @@ def player_choice
     choice = user_input 
     
      puts "#{choice}" 
-     player = Player.find_player(choice)
+     players = Players.find_player(choice)
 
     
 end 
 
-def player_information(player)
-    puts "First name: #{player.first_name}"
-    puts "Last name: #{player.last_name}"
-    puts "Team: #{player.team}"
-    puts "Position: #{player.position}"
+def player_information(players)
+    puts "First name: #{players.first_name}"
+    puts "Last name: #{players.last_name}"
+    puts "Team: #{players.team}"
+    puts "Position: #{players.position}"
     menu 
 end 
 
@@ -55,7 +55,7 @@ def menu
     choice = user_input 
 
     if choice == 'Y' || choice == 'y'
-        players_list
+        player_list
         menu 
     elsif choice == 'N' || choice == 'n'
         goodbye 

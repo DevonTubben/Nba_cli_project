@@ -9,9 +9,15 @@ class Players
         @last_name = last_name 
         @team = team 
         @position = position
-        save
+       save
      end 
 
+    # def initialize(player_hash)
+    #    player_hash.each do |k,v|
+    #        self.send("#{k}=", v)
+    #    end 
+    #    save 
+    # end 
 
     def save 
         @@all << self 
@@ -23,7 +29,7 @@ class Players
 
     
     def self.find_player(player_name)
-        self.all.find do |player| 
+        self.all.find do |players| 
             player.name == player_name 
         end 
     end 
