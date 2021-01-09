@@ -37,17 +37,17 @@ def player_choice
 
     choice = user_input 
     
-     puts "#{choice}" 
-     player = Players.find_player(choice)
+     players = Players.find_player(choice)
+     player_information(players)
 
     
 end 
 
 def player_information(players)
-    puts "First name: #{player.first_name}"
-    puts "Last name: #{player.last_name}"
-    puts "Team: #{player.team}"
-    puts "Position: #{player.position}"
+    puts "First name: #{players.first_name}"
+    puts "Last name: #{players.last_name}"
+    puts "Team: #{players.team}"
+    puts "Position: #{players.position}"
     menu 
 end 
 
