@@ -3,6 +3,7 @@ class CLI
 def start 
     puts "Welcome NBA fan! What name would you like us to call you by?"
     API.get_data 
+    binding.pry
     introduction(user_input)
 end 
 

@@ -13,7 +13,7 @@ class Players
   #   end 
 
      def initialize(player_hash)
-        player_hash.each do |k,v|
+        player_hash.each do |k, v|
             self.send("#{k}=", v) if self.respond_to?("#{k}=")
         end 
         save 
