@@ -31,8 +31,8 @@ class Players
         @first_name + " " + @last_name
     end 
 
-   # def height 
-    #    @height_feet + " " + @height_inches 
+    #def height 
+    #    @height_feet + " ' " + @height_inches 
     # end 
 
     
