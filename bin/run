@@ -3,3 +3,6 @@
 require_relative '../lib/environment.rb' 
 
 CLI.new.start 
+
+# rest = RestClient.get("https://www.balldontlie.io/api/v1/players")
+# httparty = HTTParty.get("https://www.balldontlie.io/api/v1/players")
