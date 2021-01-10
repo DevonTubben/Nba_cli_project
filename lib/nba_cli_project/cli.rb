@@ -18,11 +18,11 @@ end
 
 def player_list 
     Players.all.each.with_index(1) do |players, i|
-        #puts "#{i}, #{players.first_name}"
         puts "#{i}, #{players.full_name}"
 end 
 player_choice
 end 
+
 
 def goodbye 
     puts "Hopefully you found the information you were looking for. Bye!"
@@ -40,17 +40,8 @@ def player_choice
     
      players = Players.find_player(choice)
      player_information(players)
-
-    
+     menu
 end 
-
-#def player_information(players)
-#    puts "First name: #{players.first_name}"
-#    puts "Last name: #{players.last_name}"
-#    puts "Team: #{players.team}"
-#    puts "Position: #{players.position}"
-#    menu 
-#end 
 
 def player_information(players)
     puts "Name: #{players.full_name}"
@@ -60,11 +51,8 @@ def player_information(players)
     puts "Weight: #{players.weight_pounds}"
     #Not all players will have their height or weight
     puts "Team: #{players.team}"
-    menu 
+    
 end 
-
-
-
 
 
 
