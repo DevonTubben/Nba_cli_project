@@ -35,6 +35,7 @@ class CLI
         puts "Thanks for stopping by. I hope we were able to help you find the information you were looking for."
         puts " "
         puts "Feel free to come back at anytime! "
+        exit! 
     end 
     
     def invalid 
