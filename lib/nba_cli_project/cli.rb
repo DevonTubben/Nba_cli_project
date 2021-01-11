@@ -61,7 +61,6 @@ class CLI
         puts "Height feet: #{players.height_feet}" 
         puts "Height inches: #{players.height_inches}"
         puts "Weight: #{players.weight_pounds}"
-        #Not all players will have their height or weight
         puts "Team: #{players.team}"
         puts " "
     end 
