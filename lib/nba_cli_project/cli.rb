@@ -64,6 +64,7 @@ class CLI
         puts "Weight: #{players.weight_pounds}"
         puts "Team: #{players.team}"
         puts " "
+        puts "Type 'y' to see list again or 'n' to exit."
     end 
     
     
