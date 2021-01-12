@@ -6,7 +6,7 @@ class CLI
         puts " " 
         puts "What name would you like us to call you by?"
         puts " "
-        API.get_data 
+        API.get_nba_players 
         introduction(user_input)
     end 
     
@@ -23,26 +23,27 @@ class CLI
     
     def player_list 
         Players.all.each.with_index(1) do |players, i|
-            puts "#{i}, #{players.full_name}"
+            puts "#{i}, #{players.name}"
     end 
     player_choice
     puts " " 
     end 
     
-    
+
     def goodbye 
         puts " "
         puts "Thanks for stopping by. I hope we were able to help you find the information you were looking for."
         puts " "
         puts "Feel free to come back at anytime! "
+        puts " "
         exit! 
     end 
     
-    def invalid 
+    def invalid
         puts " "
         puts "Invalid input. Please try again."
         puts " "
-    end 
+end 
     
     def player_choice  
         puts " "
@@ -55,20 +56,33 @@ class CLI
          player_information(players)
          menu
     end 
+
     
     def player_information(players)
-        puts "Name: #{players.full_name}"
-        puts "Position: #{players.position}"
-        puts "Height feet: #{players.height_feet}" 
-        puts "Height inches: #{players.height_inches}"
-        puts "Weight: #{players.weight_pounds}"
-        puts "Team: #{players.team}"
         puts " "
+        puts "Name: #{players.name}"
+        puts " "
+        puts "Position: #{players.position}"
+        puts " "
+        puts "Height feet: #{players.height_feet}" 
+        puts " "
+        puts "Height inches: #{players.height_inches}"
+        puts " "
+        puts "Weight: #{players.weight_pounds}"
+        puts " "
+        puts "Team: #{players.team["full_name"]}" 
+        puts " "
+        puts "Team Abbreviation: #{players.team["abbreviation"]}" 
+        puts " "
+        puts "Team City: #{players.team["city"]}"
+        puts " "
+        puts "Team Conference: #{players.team["conference"]}"
+        puts "------------------------------------------------- "
         puts "Type 'y' to see list again or 'n' to exit."
+        puts " "
     end 
-    
-    
-    
+
+
     def menu 
         choice = user_input 
     
@@ -87,3 +101,4 @@ class CLI
     end 
     
     end 
+

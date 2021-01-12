@@ -2,7 +2,7 @@ class Players
 
     @@all = []
 
-    attr_accessor :first_name, :last_name, :position, :height_feet, :height_inches, :weight_pounds, :team
+    attr_accessor :first_name, :last_name, :position, :height_feet, :height_inches, :weight_pounds, :team, :city 
 
      def initialize(player_hash)
         player_hash.each do |k, v|
@@ -19,14 +19,13 @@ class Players
         @@all 
     end 
 
-    def full_name 
-        @first_name + " " + @last_name
+    def name
+        @first_name + " " + @last_name 
     end 
 
-    
     def self.find_player(player_name)
         self.all.find do |players| 
-            players.full_name == player_name 
-        end 
-    end 
+            players.name == player_name 
+        end  
+end 
 end 
