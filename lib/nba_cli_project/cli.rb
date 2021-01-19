@@ -43,18 +43,19 @@ class CLI
         puts " "
         puts "Invalid input. Please try again."
         puts " "
+        menu
 end 
+ 
     
     def player_choice  
         puts " "
         puts "Choose a player to learn more information:"
         puts " "
-    
-        choice = user_input 
         
+        choice = user_input 
+
          players = Players.find_player(choice)
          player_information(players)
-         menu
     end 
 
     
@@ -78,6 +79,7 @@ end
         puts " "
         puts "Team Conference: #{players.team["conference"]}"
         puts "------------------------------------------------- "
+        puts " "
         puts "Type 'y' to see list again or 'n' to exit."
         puts " "
     end 
@@ -96,9 +98,12 @@ end
             goodbye 
         else 
             invalid
-        end 
-    
+        end
+
+
     end 
     
     end 
+
+
 
