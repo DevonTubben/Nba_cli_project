@@ -26,9 +26,8 @@ class CLI
             puts "#{i}, #{players.name}"
     end 
     player_choice
-    puts " " 
-    end 
-    
+    puts " "
+end 
 
     def goodbye 
         puts " "
@@ -51,9 +50,7 @@ end
         puts " "
         puts "Choose a player to learn more information:"
         puts " "
-        
-        choice = user_input 
-
+         choice = user_input 
          players = Players.find_player(choice)
          player_information(players)
     end 
@@ -84,13 +81,12 @@ end
         puts " "
     end 
 
-
     def menu 
         choice = user_input 
     
         if choice == 'Y' || choice == 'y'
             puts " " 
-            puts "Here is the list of all NBA players:"
+            puts "Here is the list of NBA players:"
             puts " "
             player_list
             menu 
