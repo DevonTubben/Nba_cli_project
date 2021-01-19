@@ -8,9 +8,6 @@ class API
        Players.new(players)
     end 
   end 
-
-
-
   end 
 
 
