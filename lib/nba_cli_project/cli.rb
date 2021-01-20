@@ -53,10 +53,6 @@ end
      nba_player
    end 
 
-   def name
-
-   end 
-
    def nba_player 
     choice = user_input 
     players = Players.find_player(choice) 
