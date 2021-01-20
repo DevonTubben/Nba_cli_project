@@ -61,7 +61,9 @@ end
         @full_name = players  
         player_information(players)
     else 
+        puts " "
         puts "There is no player with that name. Type 'y' to see the list again or 'n' to exit"
+        puts " "
         menu 
     end 
 end 
