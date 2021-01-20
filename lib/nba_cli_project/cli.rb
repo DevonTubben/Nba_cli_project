@@ -50,12 +50,27 @@ end
         puts " "
         puts "Choose a player to learn more information:"
         puts " "
-         choice = user_input 
-         players = Players.find_player(choice)
-         player_information(players)
-    end 
+     nba_player
+   end 
 
+   def name
+
+   end 
+
+   def nba_player 
+    choice = user_input 
+    players = Players.find_player(choice) 
     
+    if players  
+        @full_name = players  
+        player_information(players)
+    else 
+        puts "There is no player with that name. Type 'y' to see the list again or 'n' to exit"
+        menu 
+    end 
+end 
+
+
     def player_information(players)
         puts " "
         puts "Name: #{players.name}"
@@ -96,8 +111,5 @@ end
             invalid
         end
     end 
-    
     end 
-
-
 
