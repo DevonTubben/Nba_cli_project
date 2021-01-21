@@ -20,13 +20,13 @@ class CLI
         puts " "
         menu 
     end 
-    
-    def player_list 
-        Players.all.each.with_index(1) do |players, i|
-            puts "#{i}, #{players.name}"
-    end 
-    player_choice
-    puts " "
+
+def player_list 
+    Players.all.each do |players|
+        puts " #{players.name}"
+end 
+player_choice
+puts " "
 end 
 
     def goodbye 
