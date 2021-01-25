@@ -2,7 +2,7 @@ class Players
 
     @@all = []
 
-    attr_accessor :first_name, :last_name, :position, :height_feet, :height_inches, :weight_pounds, :team, :city 
+    attr_accessor :first_name, :last_name, :position, :height_feet, :height_inches, :weight_pounds, :team  
 
      def initialize(player_hash)
         player_hash.each do |k, v|
