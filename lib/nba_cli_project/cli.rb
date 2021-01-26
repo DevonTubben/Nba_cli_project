@@ -7,6 +7,7 @@ class CLI
         puts "What name would you like us to call you by?"
         puts " "
         API.get_nba_players 
+        binding.pry
         introduction(user_input)
     end 
     
@@ -58,7 +59,7 @@ end
     players = Players.find_player(choice) 
     
     if players  
-        @full_name = players  
+        @full_name = players
         player_information(players)
     else 
         puts " "
