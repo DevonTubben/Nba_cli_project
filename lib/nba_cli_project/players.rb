@@ -21,7 +21,6 @@ class Players
 
     def name
         @first_name + " " + @last_name
-
     end 
 
     def self.find_player(player_name)
@@ -31,18 +30,8 @@ class Players
     end 
     # Takes in a string and returns an array of players of that team
     # self.find_player_by_team
-   
+
      def self.find_player_by_team(team_name)
-        @@all.select do |players| 
-            binding.pry 
-            players.team["full_name"] == team_name
-            
+        @@all.select{|players| players.team["full_name"] == team_name}   
         end 
-     end 
-    
-
-
-
-
-
 end 
